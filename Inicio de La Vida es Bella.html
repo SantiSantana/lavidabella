@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=375px, initial-scale=1.0">
+    <title>La vida es Bella - Granada</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        .hide-arrows::-webkit-inner-spin-button,
+        .hide-arrows::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a237e',
+                        secondary: '#c5a572'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white w-[375px] min-h-[762px] mx-auto relative">
+    <nav class="fixed top-0 w-full bg-primary z-50 px-4 py-3 flex justify-between items-center">
+        <button id="menuBtn" class="w-8 h-8 flex items-center justify-center text-white">
+            <i class="ri-menu-line text-xl"></i>
+        </button>
+        <h1 class="text-secondary font-['Pacifico'] text-xl">La vida es Bella</h1>
+        <button id="langBtn" class="w-8 h-8 flex items-center justify-center text-white">
+            <span class="text-sm">ES</span>
+        </button>
+    </nav>
+
+    <main class="pt-16 pb-20">
+        <div class="relative h-[200px] overflow-hidden">
+            <img src="https://public.readdy.ai/ai/img_res/6fdb8855cacb5948b77c528e01333aa0.jpg" class="w-full h-full object-cover" alt="Pub interior">
+            <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center p-4">
+                <h2 class="text-white text-2xl mb-2 font-['Pacifico']">Bienvenidos a La vida es Bella</h2>
+                <p class="text-white text-sm mb-4">Tu rincón de elegancia en Granada</p>
+                <button class="bg-secondary text-white px-6 py-2 !rounded-button">Reserva Ahora</button>
+            </div>
+        </div>
+
+        <section class="px-4 py-6">
+            <h3 class="text-primary text-xl mb-4 font-semibold">Promociones</h3>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white shadow rounded overflow-hidden">
+                    <img src="https://public.readdy.ai/ai/img_res/4d3162c7ab745fd71c44044e6da675e1.jpg" class="w-full h-[120px] object-cover" alt="Promoción">
+                    <div class="p-3">
+                        <h4 class="text-secondary text-sm font-medium">Happy Hour</h4>
+                        <p class="text-gray-600 text-xs mt-1">2x1 en cócteles selectos</p>
+                    </div>
+                </div>
+                <div class="bg-white shadow rounded overflow-hidden">
+                    <img src="https://public.readdy.ai/ai/img_res/3c725d193ef74869a82d59b2de287cd2.jpg" class="w-full h-[120px] object-cover" alt="Promoción">
+                    <div class="p-3">
+                        <h4 class="text-secondary text-sm font-medium">Noche de Vinos</h4>
+                        <p class="text-gray-600 text-xs mt-1">30% en vinos selectos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-4 py-6 bg-gray-50">
+            <h3 class="text-primary text-xl mb-4 font-semibold">Próximos Eventos</h3>
+            <div class="space-y-4">
+                <div class="bg-white p-4 rounded shadow flex gap-4">
+                    <div class="w-16 h-16 bg-primary text-white rounded flex flex-col items-center justify-center">
+                        <span class="text-sm font-medium">MAR</span>
+                        <span class="text-lg font-bold">15</span>
+                    </div>
+                    <div>
+                        <h4 class="text-secondary font-medium">Noche de Jazz</h4>
+                        <p class="text-gray-600 text-sm mt-1">Música en vivo con The Blue Note Quartet</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded shadow flex gap-4">
+                    <div class="w-16 h-16 bg-primary text-white rounded flex flex-col items-center justify-center">
+                        <span class="text-sm font-medium">MAR</span>
+                        <span class="text-lg font-bold">20</span>
+                    </div>
+                    <div>
+                        <h4 class="text-secondary font-medium">Cata de Vinos</h4>
+                        <p class="text-gray-600 text-sm mt-1">Degustación especial de vinos españoles</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-4 py-6">
+            <h3 class="text-primary text-xl mb-4 font-semibold">Galería</h3>
+            <div class="grid grid-cols-3 gap-2">
+                <img src="https://public.readdy.ai/ai/img_res/d5c2af13d9aff829c175e41ba4772280.jpg" class="w-full h-[115px] object-cover rounded" alt="Galería">
+                <img src="https://public.readdy.ai/ai/img_res/9e4699284dde63984631aed9e3447581.jpg" class="w-full h-[115px] object-cover rounded" alt="Galería">
+                <img src="https://public.readdy.ai/ai/img_res/b2597e1bc8392915b78edee3dc474234.jpg" class="w-full h-[115px] object-cover rounded" alt="Galería">
+            </div>
+        </section>
+
+        <section class="px-4 py-6 bg-gray-50">
+            <h3 class="text-primary text-xl mb-4 font-semibold">Contacto</h3>
+            <form class="space-y-4">
+                <div>
+                    <input type="text" placeholder="Nombre" class="w-full p-3 rounded border-none bg-white">
+                </div>
+                <div>
+                    <input type="email" placeholder="Email" class="w-full p-3 rounded border-none bg-white">
+                </div>
+                <div>
+                    <textarea placeholder="Mensaje" class="w-full p-3 rounded border-none bg-white h-24"></textarea>
+                </div>
+                <button class="w-full bg-secondary text-white py-3 !rounded-button">Enviar Mensaje</button>
+            </form>
+            <div class="mt-6 text-center">
+                <a href="https://instagram.com/lavidaesbella_grx" class="text-primary flex items-center justify-center gap-2">
+                    <i class="ri-instagram-line"></i>
+                    <span>@lavidaesbella_grx</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fixed bottom-0 w-full bg-primary text-white py-4 px-4 text-center text-xs">
+        <p>© 2025 La vida es Bella - Granada</p>
+    </footer>
+
+    <script>
+        let isSpanish = true;
+        const langBtn = document.getElementById('langBtn');
+        langBtn.addEventListener('click', () => {
+            isSpanish = !isSpanish;
+            langBtn.querySelector('span').textContent = isSpanish ? 'ES' : 'EN';
+        });
+
+        const menuBtn = document.getElementById('menuBtn');
+        menuBtn.addEventListener('click', () => {
+            const menu = document.createElement('div');
+            menu.className = 'fixed inset-0 bg-black/80 z-50 flex items-center justify-center';
+            menu.innerHTML = `
+                <div class="bg-white w-[300px] rounded p-4">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-primary font-medium">Menú</h3>
+                        <button class="text-gray-500"><i class="ri-close-line"></i></button>
+                    </div>
+                    <nav class="space-y-2">
+                        <a href="#" class="block p-2 text-primary hover:bg-gray-50 rounded">Inicio</a>
+                        <a href="#" class="block p-2 text-primary hover:bg-gray-50 rounded">Promociones</a>
+                        <a href="#" class="block p-2 text-primary hover:bg-gray-50 rounded">Eventos</a>
+                        <a href="#" class="block p-2 text-primary hover:bg-gray-50 rounded">Galería</a>
+                        <a href="#" class="block p-2 text-primary hover:bg-gray-50 rounded">Contacto</a>
+                    </nav>
+                </div>
+            `;
+            document.body.appendChild(menu);
+            menu.querySelector('button').onclick = () => menu.remove();
+        });
+    </script>
+</body>
+</html>
